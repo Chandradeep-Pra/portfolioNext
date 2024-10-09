@@ -1,6 +1,5 @@
 "use client";
 
-import Navbar from "@/components/shared/navbar/Navbar";
 import Pills from "@/components/shared/Pills";
 import { LinkPreview } from "@/components/shared/ui/link-preview";
 // import { motion } from "framer-motion";
