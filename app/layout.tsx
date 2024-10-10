@@ -20,8 +20,8 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Your Portfolio Title", // Update with your title
-  description: "A brief description of your portfolio.", // Update with your description
+  title: "Chandradeep | Full-stack Developer", // Update with your title
+  description: "Hi I am a Fullstack Developer and we can create anything and everything.", // Update with your description
 };
 
 export default function RootLayout({
