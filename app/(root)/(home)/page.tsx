@@ -1,7 +1,7 @@
 "use client";
 
 import Pills from "@/components/shared/Pills";
-import { LinkPreview } from "@/components/shared/ui/link-preview";
+import { LinkPreview } from "@/components/ui/link-preview";
 // import { motion } from "framer-motion";
 
 import GithubLogo from "@/public/assests/icons/Github";
