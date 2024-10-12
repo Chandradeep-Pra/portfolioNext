@@ -1,6 +1,5 @@
 "use server";
 
-import Link from "next/link";
 import React from "react";
 import ProjectCard from "./_components/ProjectCard";
 import AboutProject from "./_components/AboutProject";
