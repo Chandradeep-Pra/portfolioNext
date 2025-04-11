@@ -1,11 +1,48 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
 
-:root {
-  --font-fira-code: 'Fira Code', monospace; /* Fallback font */
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-primary: #E0E7FF;
+  --color-accent: #7F5AF0;
+  --color-background: 	#0D0A1F;
+  --color-text: #E2E8F0;
+  --font-mona-sans: "Mona Sans", sans-serif;
+  --color-light: #A1A1AA;
+  /* --bg-pattern: url("/pattern.png"); */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #E0E7FF;
+    --color-accent: #7F5AF0;
+    --color-background: 	#0D0A1F;
+    --color-text: #E2E8F0;
+  }
 }
 
 body {
-  font-family: var(--font-fira-code);
+  background: var(--color-background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+::-webkit-scrollbar {
+  height: 8px;
+  width: 4px;
+  
+}
+
+::-webkit-scrollbar-track {
+  background: #c9beeb;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #7F5AF0; /* Your primary theme color */
+  border-radius: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
 }
