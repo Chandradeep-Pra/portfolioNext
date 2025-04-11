@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { BiChevronDown } from "react-icons/bi";
 
 
@@ -74,7 +74,7 @@ export default function Timeline() {
               </h4>
               <div className="flex w-full items-center justify-between relative">
               <p className="text-sm text-light/90 mt-1">{item.desc}</p>
-                <BiChevronDown size={24} className={`absolute right-0 top-2 text-accent/50 hover:text-[#c9beeb]  ${expanded && "rotate-90"}`} />
+                <BiChevronDown size={24} className={`absolute right-0 top-2 text-accent/50 hover:text-[#c9beeb]  ${expanded && "rotate-180"}`} />
               </div>
 
               {expanded === index && (

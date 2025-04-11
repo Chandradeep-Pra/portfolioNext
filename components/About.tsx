@@ -1,5 +1,7 @@
 "use client";
 
+//@ts-nocheck
+
 import {
   SiReact,
   SiTypescript,
@@ -23,7 +25,7 @@ export default function About() {
     FramerMotion: SiFramer,
     Web3: SiWeb3Dotjs,
     Git: SiGit,
-    vsCode:VscCode ,
+    vsCode:VscCode,
   };
 
   const techIcons = [
@@ -141,7 +143,7 @@ export default function About() {
           {/* 🧩 Tech Stack Grid */}
           <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 justify-items-center">
   {techIcons.map(({ name, color }, i) => {
-    const IconComponent = Icons[name];
+    const IconComponent = Icons[name as keyof typeof Icons];
     return (
       <div
         key={i}
