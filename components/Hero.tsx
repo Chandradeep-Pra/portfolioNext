@@ -37,10 +37,10 @@ export default function Hero() {
         {/* 📂 CTAs */}
         <div className="flex flex-wrap justify-center gap-4 pt-6">
           <a
-            href="/resume.pdf"
+            href="#contact"
             className="bg-accent text-white px-7 py-3 rounded-full font-semibold shadow-lg hover:scale-[1.04] hover:shadow-accent/30 transition-all duration-300"
           >
-            📄 Resume
+            📧 Get In Touch
           </a>
           <a
             href="#projects"
