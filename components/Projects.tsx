@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { BiChevronDown,  BiLinkExternal, BiLogoGithub } from "react-icons/bi";
 
@@ -124,7 +125,7 @@ export default function Projects() {
           >
             {/* Project Image */}
             <div className="relative h-48 overflow-hidden">
-              <img
+              <Image
                 src={project.image}
                 alt={project.title}
                 className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
