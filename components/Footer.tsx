@@ -82,7 +82,7 @@ export default function Footer() {
             <div className="space-y-2 text-sm">
               <p className="text-light">
                 <span className="font-medium text-accent">Email:</span><br />
-                chandradeep.prasad@example.com
+                chandradeepp611@gmail.com
               </p>
               <p className="text-light">
                 <span className="font-medium text-accent">Location:</span><br />
