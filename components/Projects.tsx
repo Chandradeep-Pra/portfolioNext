@@ -12,7 +12,7 @@ const projects = [
     description: "A web based app to manage orders, customer, inventory and automated whatsapp message",
     longDescription: "Built a Fullstack SaaS app for a business to effeciently manage their customers and order lifecycle. User can add orders manually or get it from zoho. Notify automatically on WhatsApp for order status and send payment reminder. Reward system for customer who are paying on time. ",
     tech: ["NextJS","Typescript" ,"Firebase", "WhatsApp API Integration", "ZOHO estimate integration", "Custom and alive toast", "Optimistic UI", "Zustand"],
-    image: "/projects/Shiptrack.png",
+    image: "/projects/Shiptrack.PNG",
     github: "https://github.com/Tic-Tech-Toe/oms",
     live: "https://oms-delta.vercel.app/",
     featured: true
@@ -24,7 +24,7 @@ const projects = [
     description: "A catalog with elegant UI + CMS - to update contents of catalog",
     longDescription: "Develpoed a fullstack app. Catalog - a very good looking website for indian dresses for a business. I used modern style ( like rounded corners and poppy yet pleasing colors ) , banner for each category and very smooth interaction. CMS ( the real magic ) - This CMS helps catalog to grow with business. User can add category and products in it. A smart banner maker ( this will never look bad ) - User can upload image and text and that's it - A smart algorithm can decide banner gradient, text color and can remove background from the image to make sure banner never looks bad. Live preview - User can manage order of the categories.",
     tech: ["NextJS", "TypeScript", "MongoDB", "Cloudinary", "Tailwind CSS"],
-    image: "/projects/Aashya.png",
+    image: "/projects/Aashya.PNG",
     github: "https://github.com/Chandradeep-Pra/cataloger-content-management",
     live: "https://github.com/Chandradeep-Pra/cataloger-aashya",
     featured: true
@@ -36,7 +36,7 @@ const projects = [
     description: "If you wanna check what's the day looks like, Either look from window or open this app",
     longDescription: "A very live weather application with scenes to predict exactly what the day looks out , scene for light rain, heavy rain, thunder, sky color, cloud type, wind speed, snowfall, (day, night, evening, morning) and all this decided by a smart scene maker",
     tech: ["React", "JavaScript", "OpenWeatherMap API", "CSS3", "Framer-motion"],
-    image: "/projects/Weather.png",
+    image: "/projects/Weather.PNG",
     github: "https://github.com/Chandradeep-Pra/weather-app",
     live: "#",
     featured: false
@@ -48,7 +48,7 @@ const projects = [
     description: "A marketplace to list, buy and sell NFts",
     longDescription: "A web app to Buy, Sell and List NFTs. Made a good looking UI with light and dark mode. User can connect their Metamask wallet and can trade NFTs",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Smart-contract","Metamask","Sol","Web3"],
-    image: "/projects/Kat.png",
+    image: "/projects/Kat.PNG",
     github: "https://github.com/Chandradeep-Pra/nft-marketplace",
     live: "https://nft-marketplace-snowy-nine.vercel.app/",
     featured: false
@@ -60,7 +60,7 @@ const projects = [
     description: "GenAI project management lifecycle",
     longDescription: "Built a fullstack app to help project manager to automate tasks. It starts from meeting transcription then it generates a comprehensive PRD and sends PM to review. Once review is done, it breaks down task in sub-task by category i.e Frontend, Backend and Testing. Looks inside employee database and assign task to them and generates ticket on Zira and sends mail to employees about the task with acceptance criteria.",
     tech: ["NextJS", "Typescript", "GenAI-(Gemini)", "Zira API",],
-    image: "/projects/Tasktrack.png",
+    image: "/projects/Tasktrack.PNG",
     github: "https://github.com/Chandradeep-Pra/task-train",
     live: "https://task-train.vercel.app/",
     featured: true
@@ -72,7 +72,7 @@ const projects = [
     description: "An AI agent to help people prepare for interview.",
     longDescription: "It reads resume, job description, looks for question asked previously and current market trends and then generates a set of question and starts taking candidate's interview. Generates a comprehensive and detailed feedback. I am trying to allow a code editor to take live coding test",
     tech: ["Next.js", "GenAI", "TailwindCSS", "Pdf-parser"],
-    image: "/projects/IH.png",
+    image: "/projects/IH.PNG",
     github: "https://github.com/Chandradeep-Pra/interview-helper-UI",
     live: "https://interview-helper-ui.vercel.app/",
     featured: false
