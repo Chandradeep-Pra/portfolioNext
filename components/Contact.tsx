@@ -39,8 +39,8 @@ export default function Contact() {
     {
       icon: BiEnvelope,
       label: "Email",
-      value: "chandradeep.prasad@example.com",
-      href: "mailto:chandradeep.prasad@example.com"
+      value: "chandradeepp611@gmail.com",
+      href: "mailto:chandradeepp611@gmail.com"
     },
     {
       icon: BiPhone,
