@@ -19,7 +19,6 @@ import {
   SiRedux,
   SiGraphql,
   SiDocker,
-  SiAws,
   SiVercel,
   SiNetlify,
   SiJest,
