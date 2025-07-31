@@ -45,8 +45,8 @@ export default function Contact() {
     {
       icon: BiPhone,
       label: "Phone",
-      value: "+91 XXXXX XXXXX",
-      href: "tel:+91XXXXXXXXX"
+      value: "+91 96359-01369",
+      href: "tel:+9196359-01369"
     },
     {
       icon: BiMap,
@@ -60,35 +60,29 @@ export default function Contact() {
     {
       icon: BiLogoLinkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/chandradeep-prasad",
+      href: "https://linkedin.com/in/chandradeepprasad",
       color: "hover:text-blue-400"
     },
     {
       icon: BiLogoGithub,
       label: "GitHub",
-      href: "https://github.com/chandradeep",
+      href: "https://github.com/chandradeep-pra",
       color: "hover:text-gray-300"
-    },
-    {
-      icon: BiLogoTwitter,
-      label: "Twitter",
-      href: "https://twitter.com/chandradeep",
-      color: "hover:text-blue-400"
     }
   ];
 
   return (
-    <section id="contact" className="relative z-10 py-24 px-6 md:px-20 max-w-7xl mx-auto text-text">
+    <section id="contact" className="relative z-10 px-6 py-24 mx-auto md:px-20 max-w-7xl text-text">
       <h2 className="text-3xl sm:text-4xl font-bold text-accent mb-16 text-center drop-shadow-[0_0_4px_var(--color-accent)]">
         Get In Touch
       </h2>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div className="grid grid-cols-1 gap-16">
         {/* Contact Information */}
         <div className="space-y-8">
           <div>
-            <h3 className="text-2xl font-bold text-accent mb-4">Let's Work Together</h3>
-            <p className="text-light leading-relaxed mb-8">
+            <h3 className="mb-4 text-2xl font-bold text-accent">Let's Work Together</h3>
+            <p className="mb-8 leading-relaxed text-light">
               I'm always interested in new opportunities and exciting projects. 
               Whether you have a project in mind, want to collaborate, or just want to say hello, 
               I'd love to hear from you!
@@ -103,14 +97,14 @@ export default function Contact() {
                 <a
                   key={index}
                   href={info.href}
-                  className="flex items-center gap-4 p-4 bg-background/50 border border-accent/10 rounded-xl backdrop-blur-sm hover:bg-accent/5 hover:border-accent/20 transition-all duration-300 group"
+                  className="flex items-center gap-4 p-4 transition-all duration-300 border bg-background/50 border-accent/10 rounded-xl backdrop-blur-sm hover:bg-accent/5 hover:border-accent/20 group"
                 >
-                  <div className="p-3 bg-accent/10 rounded-lg group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                  <div className="p-3 transition-all duration-300 rounded-lg bg-accent/10 group-hover:bg-accent group-hover:text-white">
                     <IconComponent size={24} className="text-accent group-hover:text-white" />
                   </div>
                   <div>
-                    <div className="text-sm text-light/60 font-medium">{info.label}</div>
-                    <div className="text-light group-hover:text-accent transition-colors duration-300">
+                    <div className="text-sm font-medium text-light/60">{info.label}</div>
+                    <div className="transition-colors duration-300 text-light group-hover:text-accent">
                       {info.value}
                     </div>
                   </div>
@@ -121,7 +115,7 @@ export default function Contact() {
 
           {/* Social Links */}
           <div>
-            <h4 className="text-lg font-semibold text-accent mb-4">Follow Me</h4>
+            <h4 className="mb-4 text-lg font-semibold text-accent">Follow Me</h4>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => {
                 const IconComponent = social.icon;
@@ -142,15 +136,15 @@ export default function Contact() {
           </div>
 
           {/* Availability Status */}
-          <div className="p-6 bg-gradient-to-r from-accent/10 to-primary/10 border border-accent/20 rounded-xl backdrop-blur-sm">
+          <div className="p-6 border bg-gradient-to-r from-accent/10 to-primary/10 border-accent/20 rounded-xl backdrop-blur-sm">
             <div className="flex items-center gap-3 mb-2">
-              <div className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+              <div className="relative flex w-3 h-3">
+                <span className="absolute inline-flex w-full h-full bg-green-400 rounded-full opacity-75 animate-ping"></span>
+                <span className="relative inline-flex w-3 h-3 bg-green-500 rounded-full"></span>
               </div>
-              <span className="font-semibold text-accent">Available for Work</span>
+              <span className="font-semibold text-accent">Available for Work - Send a message</span>
             </div>
-            <p className="text-light text-sm">
+            <p className="text-sm text-light">
               Currently open to new opportunities and freelance projects. 
               Let's discuss how we can work together!
             </p>
@@ -158,13 +152,13 @@ export default function Contact() {
         </div>
 
         {/* Contact Form */}
-        <div className="bg-background/50 border border-accent/10 rounded-2xl p-8 backdrop-blur-sm">
-          <h3 className="text-xl font-bold text-accent mb-6">Send Me a Message</h3>
+        {/* <div className="p-8 border bg-background/50 border-accent/10 rounded-2xl backdrop-blur-sm">
+          <h3 className="mb-6 text-xl font-bold text-accent">Send Me a Message</h3>
           
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-light mb-2">
+                <label htmlFor="name" className="block mb-2 text-sm font-medium text-light">
                   Name *
                 </label>
                 <input
@@ -174,13 +168,13 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-background/60 border border-accent/20 rounded-lg text-light placeholder-light/50 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all duration-300"
+                  className="w-full px-4 py-3 transition-all duration-300 border rounded-lg bg-background/60 border-accent/20 text-light placeholder-light/50 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent"
                   placeholder="Your name"
                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-light mb-2">
+                <label htmlFor="email" className="block mb-2 text-sm font-medium text-light">
                   Email *
                 </label>
                 <input
@@ -190,14 +184,14 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-background/60 border border-accent/20 rounded-lg text-light placeholder-light/50 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all duration-300"
+                  className="w-full px-4 py-3 transition-all duration-300 border rounded-lg bg-background/60 border-accent/20 text-light placeholder-light/50 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent"
                   placeholder="your.email@example.com"
                 />
               </div>
             </div>
 
             <div>
-              <label htmlFor="subject" className="block text-sm font-medium text-light mb-2">
+              <label htmlFor="subject" className="block mb-2 text-sm font-medium text-light">
                 Subject *
               </label>
               <input
@@ -207,13 +201,13 @@ export default function Contact() {
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-background/60 border border-accent/20 rounded-lg text-light placeholder-light/50 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all duration-300"
+                className="w-full px-4 py-3 transition-all duration-300 border rounded-lg bg-background/60 border-accent/20 text-light placeholder-light/50 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent"
                 placeholder="What's this about?"
               />
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-light mb-2">
+              <label htmlFor="message" className="block mb-2 text-sm font-medium text-light">
                 Message *
               </label>
               <textarea
@@ -223,7 +217,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 rows={6}
-                className="w-full px-4 py-3 bg-background/60 border border-accent/20 rounded-lg text-light placeholder-light/50 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all duration-300 resize-none"
+                className="w-full px-4 py-3 transition-all duration-300 border rounded-lg resize-none bg-background/60 border-accent/20 text-light placeholder-light/50 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent"
                 placeholder="Tell me about your project or just say hello!"
               />
             </div>
@@ -231,11 +225,11 @@ export default function Contact() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-accent text-white font-semibold rounded-lg hover:bg-accent/90 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+              className="flex items-center justify-center w-full gap-2 px-6 py-3 font-semibold text-white transition-all duration-300 rounded-lg bg-accent hover:bg-accent/90 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? (
                 <>
-                  <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  <div className="w-5 h-5 border-2 rounded-full border-white/30 border-t-white animate-spin" />
                   Sending...
                 </>
               ) : (
@@ -246,14 +240,13 @@ export default function Contact() {
               )}
             </button>
 
-            {/* Success Message */}
             {submitStatus === 'success' && (
-              <div className="p-4 bg-green-500/10 border border-green-500/20 rounded-lg text-green-400 text-sm text-center">
+              <div className="p-4 text-sm text-center text-green-400 border rounded-lg bg-green-500/10 border-green-500/20">
                 Thank you for your message! I'll get back to you soon.
               </div>
             )}
           </form>
-        </div>
+        </div> */}
       </div>
     </section>
   );

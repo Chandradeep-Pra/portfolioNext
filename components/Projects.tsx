@@ -1,79 +1,79 @@
 "use client";
 
 import { useState } from "react";
-import { BiChevronDown, BiGithub, BiLinkExternal } from "react-icons/bi";
+import { BiChevronDown,  BiLinkExternal, BiLogoGithub } from "react-icons/bi";
 
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "Shiptrack",
     category: "Full Stack",
-    description: "A complete e-commerce solution with user authentication, product management, and payment integration.",
-    longDescription: "Built a comprehensive e-commerce platform using React, Node.js, and MongoDB. Features include user authentication, product catalog, shopping cart, order management, and Stripe payment integration. Implemented responsive design and optimized for performance.",
-    tech: ["React", "Node.js", "MongoDB", "Express", "Stripe", "JWT"],
-    image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
-    github: "https://github.com/chandradeep",
-    live: "https://ecommerce-demo.com",
+    description: "A web based app to manage orders, customer, inventory and automated whatsapp message",
+    longDescription: "Built a Fullstack SaaS app for a business to effeciently manage their customers and order lifecycle. User can add orders manually or get it from zoho. Notify automatically on WhatsApp for order status and send payment reminder. Reward system for customer who are paying on time. ",
+    tech: ["NextJS","Typescript" ,"Firebase", "WhatsApp API Integration", "ZOHO estimate integration", "Custom and alive toast", "Optimistic UI", "Zustand"],
+    image: "/projects/Shiptrack.png",
+    github: "https://github.com/Tic-Tech-Toe/oms",
+    live: "https://oms-delta.vercel.app/",
     featured: true
   },
   {
     id: 2,
-    title: "Task Management Dashboard",
-    category: "Frontend",
-    description: "A modern task management application with drag-and-drop functionality and real-time updates.",
-    longDescription: "Developed a task management dashboard with drag-and-drop functionality using React DnD. Features include task creation, assignment, progress tracking, and real-time collaboration. Integrated with Firebase for backend services.",
-    tech: ["React", "TypeScript", "Firebase", "React DnD", "Tailwind CSS"],
-    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800",
-    github: "https://github.com/chandradeep",
-    live: "https://taskmanager-demo.com",
+    title: "Aashya ( Catalog + CMS )",
+    category: "Fullstack",
+    description: "A catalog with elegant UI + CMS - to update contents of catalog",
+    longDescription: "Develpoed a fullstack app. Catalog - a very good looking website for indian dresses for a business. I used modern style ( like rounded corners and poppy yet pleasing colors ) , banner for each category and very smooth interaction. CMS ( the real magic ) - This CMS helps catalog to grow with business. User can add category and products in it. A smart banner maker ( this will never look bad ) - User can upload image and text and that's it - A smart algorithm can decide banner gradient, text color and can remove background from the image to make sure banner never looks bad. Live preview - User can manage order of the categories.",
+    tech: ["NextJS", "TypeScript", "MongoDB", "Cloudinary", "Tailwind CSS"],
+    image: "/projects/Aashya.png",
+    github: "https://github.com/Chandradeep-Pra/cataloger-content-management",
+    live: "https://github.com/Chandradeep-Pra/cataloger-aashya",
     featured: true
   },
   {
     id: 3,
-    title: "Weather App",
+    title: "Immersive Weather App",
     category: "Frontend",
-    description: "A responsive weather application with location-based forecasts and interactive maps.",
-    longDescription: "Created a weather application that provides current weather conditions and 7-day forecasts. Features location-based weather, interactive maps, weather alerts, and beautiful animations. Used OpenWeatherMap API for weather data.",
-    tech: ["React", "JavaScript", "OpenWeatherMap API", "CSS3", "Geolocation"],
+    description: "If you wanna check what's the day looks like, Either look from window or open this app",
+    longDescription: "A very live weather application with scenes to predict exactly what the day looks out , scene for light rain, heavy rain, thunder, sky color, cloud type, wind speed, snowfall, (day, night, evening, morning) and all this decided by a smart scene maker",
+    tech: ["React", "JavaScript", "OpenWeatherMap API", "CSS3", "Framer-motion"],
     image: "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800",
-    github: "https://github.com/chandradeep",
-    live: "https://weather-app-demo.com",
+    github: "https://github.com/Chandradeep-Pra/weather-app",
+    live: "#",
     featured: false
   },
   {
     id: 4,
-    title: "Portfolio Website",
+    title: "CryptoKat",
     category: "Frontend",
-    description: "A modern, responsive portfolio website built with Next.js and Tailwind CSS.",
-    longDescription: "Designed and developed a personal portfolio website showcasing projects and skills. Features smooth animations, responsive design, dark mode toggle, and optimized performance. Built with modern web technologies.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
-    github: "https://github.com/chandradeep",
-    live: "https://chandradeep-portfolio.com",
+    description: "A marketplace to list, buy and sell NFts",
+    longDescription: "A web app to Buy, Sell and List NFTs. Made a good looking UI with light and dark mode. User can connect their Metamask wallet and can trade NFTs",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Smart-contract","Metamask","Sol","Web3"],
+    image: "/projects/Kat.png",
+    github: "https://github.com/Chandradeep-Pra/nft-marketplace",
+    live: "https://nft-marketplace-snowy-nine.vercel.app/",
     featured: false
   },
   {
     id: 5,
-    title: "Chat Application",
+    title: "Tasktrack",
     category: "Full Stack",
-    description: "Real-time chat application with user authentication and message encryption.",
-    longDescription: "Built a real-time chat application with Socket.io for instant messaging. Features include user authentication, private and group chats, message encryption, file sharing, and online status indicators. Deployed on AWS.",
-    tech: ["React", "Node.js", "Socket.io", "MongoDB", "JWT", "AWS"],
-    image: "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800",
-    github: "https://github.com/chandradeep",
-    live: "https://chat-app-demo.com",
+    description: "GenAI project management lifecycle",
+    longDescription: "Built a fullstack app to help project manager to automate tasks. It starts from meeting transcription then it generates a comprehensive PRD and sends PM to review. Once review is done, it breaks down task in sub-task by category i.e Frontend, Backend and Testing. Looks inside employee database and assign task to them and generates ticket on Zira and sends mail to employees about the task with acceptance criteria.",
+    tech: ["NextJS", "Typescript", "GenAI-(Gemini)", "Zira API",],
+    image: "/projects/Tasktrack.png",
+    github: "https://github.com/Chandradeep-Pra/task-train",
+    live: "https://task-train.vercel.app/",
     featured: true
   },
   {
     id: 6,
-    title: "Blog Platform",
+    title: "Interview Helper",
     category: "Full Stack",
-    description: "A content management system for bloggers with rich text editor and SEO optimization.",
-    longDescription: "Developed a blog platform with rich text editor, comment system, and SEO optimization. Features include user roles, content moderation, analytics dashboard, and social media integration. Built with modern web technologies.",
-    tech: ["Next.js", "Prisma", "PostgreSQL", "NextAuth", "Tailwind CSS"],
-    image: "https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?auto=compress&cs=tinysrgb&w=800",
-    github: "https://github.com/chandradeep",
-    live: "https://blog-platform-demo.com",
+    description: "An AI agent to help people prepare for interview.",
+    longDescription: "It reads resume, job description, looks for question asked previously and current market trends and then generates a set of question and starts taking candidate's interview. Generates a comprehensive and detailed feedback. I am trying to allow a code editor to take live coding test",
+    tech: ["Next.js", "GenAI", "TailwindCSS", "Pdf-parser"],
+    image: "/projects/IH.png",
+    github: "https://github.com/Chandradeep-Pra/interview-helper-UI",
+    live: "https://interview-helper-ui.vercel.app/",
     featured: false
   }
 ];
@@ -91,14 +91,14 @@ export default function Projects() {
   const featuredProjects = projects.filter(project => project.featured);
 
   return (
-    <section id="projects" className="relative z-10 py-24 px-6 md:px-20 max-w-7xl mx-auto text-text">
+    <section id="projects" className="relative z-10 px-6 py-24 mx-auto md:px-20 max-w-7xl text-text">
       <h2 className="text-3xl sm:text-4xl font-bold text-accent mb-16 text-center drop-shadow-[0_0_4px_var(--color-accent)]">
         Featured Projects
       </h2>
 
       {/* Category Filter */}
       <div className="flex justify-center mb-12">
-        <div className="flex gap-2 p-1 bg-background/50 border border-accent/10 rounded-full backdrop-blur-sm">
+        <div className="flex gap-2 p-1 border rounded-full bg-background/50 border-accent/10 backdrop-blur-sm">
           {categories.map((category) => (
             <button
               key={category}
@@ -116,7 +116,7 @@ export default function Projects() {
       </div>
 
       {/* Featured Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      <div className="grid grid-cols-1 gap-8 mb-16 md:grid-cols-2 lg:grid-cols-3">
         {filteredProjects.map((project, index) => (
           <div
             key={project.id}
@@ -127,32 +127,32 @@ export default function Projects() {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
               
               {/* Category Badge */}
               <div className="absolute top-4 left-4">
-                <span className="px-3 py-1 bg-accent/90 text-white text-xs font-semibold rounded-full backdrop-blur-sm">
+                <span className="px-3 py-1 text-xs font-semibold text-white rounded-full bg-accent/90 backdrop-blur-sm">
                   {project.category}
                 </span>
               </div>
 
               {/* Links */}
-              <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute flex gap-2 transition-opacity duration-300 opacity-0 top-4 right-4 group-hover:opacity-100">
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 bg-background/80 text-accent rounded-full hover:bg-accent hover:text-white transition-colors duration-300 backdrop-blur-sm"
+                  className="p-2 transition-colors duration-300 rounded-full bg-background/80 text-accent hover:bg-accent hover:text-white backdrop-blur-sm"
                 >
-                  <BiGithub size={18} />
+                  {<BiLogoGithub size={18} />}
                 </a>
                 <a
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 bg-background/80 text-accent rounded-full hover:bg-accent hover:text-white transition-colors duration-300 backdrop-blur-sm"
+                  className="p-2 transition-colors duration-300 rounded-full bg-background/80 text-accent hover:bg-accent hover:text-white backdrop-blur-sm"
                 >
                   <BiLinkExternal size={18} />
                 </a>
@@ -161,18 +161,18 @@ export default function Projects() {
 
             {/* Project Content */}
             <div className="p-6">
-              <h3 className="text-xl font-bold text-accent mb-2 group-hover:text-primary transition-colors duration-300">
+              <h3 className="mb-2 text-xl font-bold transition-colors duration-300 text-accent group-hover:text-primary">
                 {project.title}
               </h3>
               
-              <p className="text-light text-sm mb-4 leading-relaxed">
+              <p className="mb-4 text-sm leading-relaxed text-light">
                 {expandedProject === project.id ? project.longDescription : project.description}
               </p>
 
               {/* Expand Button */}
               <button
                 onClick={() => setExpandedProject(expandedProject === project.id ? null : project.id)}
-                className="flex items-center gap-1 text-accent hover:text-primary text-sm font-medium mb-4 transition-colors duration-300"
+                className="flex items-center gap-1 mb-4 text-sm font-medium transition-colors duration-300 text-accent hover:text-primary"
               >
                 {expandedProject === project.id ? "Show Less" : "Read More"}
                 <BiChevronDown 
@@ -188,7 +188,7 @@ export default function Projects() {
                 {project.tech.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full border border-accent/20"
+                    className="px-3 py-1 text-xs font-medium border rounded-full bg-accent/10 text-accent border-accent/20"
                   >
                     {tech}
                   </span>
@@ -202,12 +202,12 @@ export default function Projects() {
       {/* View All Projects Button */}
       <div className="text-center">
         <a
-          href="https://github.com/chandradeep"
+          href="https://github.com/chandradeep-pra"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-8 py-3 bg-accent/10 border border-accent text-accent rounded-full font-semibold hover:bg-accent hover:text-white transition-all duration-300 hover:scale-105"
+          className="inline-flex items-center gap-2 px-8 py-3 font-semibold transition-all duration-300 border rounded-full bg-accent/10 border-accent text-accent hover:bg-accent hover:text-white hover:scale-105"
         >
-          <BiGithub size={20} />
+          <BiLogoGithub size={20} />
           View All Projects on GitHub
         </a>
       </div>

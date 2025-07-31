@@ -13,16 +13,17 @@ const links = [
 ];
 
 export default function Nav() {
+  
   return (
-    <nav className="fixed left-4 top-1/2 -translate-y-1/2 z-50 hidden sm:flex flex-col gap-6 p-4 bg-background/50 backdrop-blur-xl rounded-3xl border border-accent/20 shadow-md">
+    <nav className="fixed z-50 flex-col hidden gap-6 p-4 -translate-y-1/2 border shadow-md -left-4 top-1/2 sm:flex bg-background/20 backdrop-blur-xl rounded-3xl border-accent/20">
       {links.map((link) => (
         <Link
           key={link.href}
           href={link.href}
-          className="group flex flex-col items-center text-accent hover:text-white transition-all"
+          className="flex flex-col items-center transition-all group text-accent hover:text-white"
         >
           <span className="text-xl">{link.icon}</span>
-          <span className="text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-light font-medium">
+          <span className="text-xs font-medium transition-opacity duration-300 opacity-0 group-hover:opacity-100 text-light">
             {link.label}
           </span>
         </Link>

@@ -11,14 +11,14 @@
   --font-mona-sans: "Mona Sans", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --color-primary: #E0E7FF;
     --color-accent: #7F5AF0;
     --color-background: #0D0A1F;
     --color-text: #E2E8F0;
   }
-}
+} */
 
 body {
   background: var(--color-background);

@@ -42,22 +42,22 @@ export default function About() {
   // const bentoItems = [
   //   {
   //     title: "React + TypeScript",
-  //     icon: <SiReact className="text-cyan-400 text-4xl" />,
+  //     icon: <SiReact className="text-4xl text-cyan-400" />,
   //     sub: "Reusable components & strong typings",
   //   },
   //   {
   //     title: "Tailwind + Next.js",
-  //     icon: <SiTailwindcss className="text-sky-400 text-4xl" />,
+  //     icon: <SiTailwindcss className="text-4xl text-sky-400" />,
   //     sub: "Fast styling & SSR-ready apps",
   //   },
   //   {
   //     title: "Firebase & Framer Motion",
-  //     icon: <SiFirebase className="text-yellow-400 text-4xl" />,
+  //     icon: <SiFirebase className="text-4xl text-yellow-400" />,
   //     sub: "Backend as a Service + animation magic",
   //   },
   //   {
   //     title: "Web3 & VSCode",
-  //     icon: <SiWeb3Dotjs className="text-indigo-400 text-4xl" />,
+  //     icon: <SiWeb3Dotjs className="text-4xl text-indigo-400" />,
   //     sub: "Blockchain dev + my daily toolset",
   //   },
   //   {
@@ -98,18 +98,18 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative z-10 py-24 px-6 md:px-20 max-w-7xl mx-auto text-text"
+      className="relative z-10 px-6 py-24 mx-auto md:px-20 max-w-7xl text-text"
     >
       <h2 className="text-3xl sm:text-4xl font-bold text-accent mb-16 text-center drop-shadow-[0_0_4px_var(--color-accent)]">
         About Me
       </h2>
 
       {/* Responsive Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+      <div className="grid items-start grid-cols-1 gap-16 md:grid-cols-2">
         {/* Left Column */}
         <div className="space-y-10">
           {/* 👨‍💻 Dev Bio */}
-          <div className="space-y-4 text-light text-base leading-relaxed">
+          <div className="space-y-4 text-base leading-relaxed text-light">
             <p>
               I’m a frontend developer who’s obsessed with building interfaces
               that feel smooth, thoughtful, and alive.
@@ -123,14 +123,14 @@ export default function About() {
           </div>
 
           {/* 🧾 Quick Summary */}
-          <div className="bg-background/50 border border-accent/10 p-4 rounded-2xl backdrop-blur-md">
+          <div className="p-4 border bg-background/50 border-accent/10 rounded-2xl backdrop-blur-md">
             <p className="text-sm text-primary">
               🔍 Currently exploring: AI-enhanced UIs, Firebase, and product
               design systems.
             </p>
-            <p className="text-sm text-primary mt-2">
+            <a className="mt-2 text-sm underline text-primary underline-offset-1 cursor-help" href="https://linkedin.com/in/chandradeepprasad" target="_blank">
               ⚡ Actively looking for frontend opportunities.
-            </p>
+            </a>
           </div>
 
           {/* 🕒 Timeline */}
@@ -141,16 +141,16 @@ export default function About() {
         {/* Right Column */}
         <div className="space-y-10">
           {/* 🧩 Tech Stack Grid */}
-          <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 justify-items-center">
+          <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 justify-items-center">
   {techIcons.map(({ name, color }, i) => {
     const IconComponent = Icons[name as keyof typeof Icons];
     return (
       <div
         key={i}
-        className="group flex flex-col items-center justify-center p-3 rounded-xl bg-background/60 border border-accent/10 hover:scale-105 transition shadow-sm hover:shadow-accent/20 backdrop-blur-sm"
+        className="flex flex-col items-center justify-center p-3 transition border shadow-sm group rounded-xl bg-background/60 border-accent/10 hover:scale-105 hover:shadow-accent/20 backdrop-blur-sm"
       >
         {IconComponent && <IconComponent className={`text-3xl ${color}`} />}
-        <span className="text-xs text-light/80 mt-1 group-hover:text-accent transition">
+        <span className="mt-1 text-xs transition text-light/80 group-hover:text-accent">
           {name}
         </span>
       </div>
@@ -160,7 +160,7 @@ export default function About() {
 
 
           {/* 🌟 Highlights */}
-<div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
+<div className="grid grid-cols-1 gap-4 mt-10 sm:grid-cols-2">
   {[
     {
       title: "Built 20+ reusable components",
@@ -186,7 +186,7 @@ export default function About() {
   hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(127,90,240,0.15)]
   animate-fade-up delay-[200ms]"
     >
-      <p className="text-lg font-semibold text-accent flex items-center gap-2">
+      <p className="flex items-center gap-2 text-lg font-semibold text-accent">
         <span>{item.emoji}</span> {item.title}
       </p>
     </div>

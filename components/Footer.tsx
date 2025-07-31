@@ -6,19 +6,19 @@ export default function Footer() {
   const socialLinks = [
     {
       icon: BiLogoLinkedin,
-      href: "https://linkedin.com/in/chandradeep-prasad",
+      href: "https://linkedin.com/in/chandradeepprasad",
       label: "LinkedIn"
     },
     {
       icon: BiLogoGithub,
-      href: "https://github.com/chandradeep",
+      href: "https://github.com/chandradeep-pra",
       label: "GitHub"
     },
-    {
-      icon: BiLogoTwitter,
-      href: "https://twitter.com/chandradeep",
-      label: "Twitter"
-    }
+    // {
+    //   icon: BiLogoTwitter,
+    //   href: "https://twitter.com/chandradeep",
+    //   label: "Twitter"
+    // }
   ];
 
   const quickLinks = [
@@ -31,13 +31,13 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative z-10 bg-background/80 border-t border-accent/10 backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto px-6 md:px-20 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="relative z-10 border-t bg-background/80 border-accent/10 backdrop-blur-sm">
+      <div className="px-6 py-12 mx-auto max-w-7xl md:px-20">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {/* Brand Section */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-accent">Chandradeep Prasad</h3>
-            <p className="text-light text-sm leading-relaxed">
+            <p className="text-sm leading-relaxed text-light">
               Frontend Developer passionate about creating beautiful, functional, and user-friendly web experiences. 
               Always learning and exploring new technologies.
             </p>
@@ -50,7 +50,7 @@ export default function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 bg-background/50 border border-accent/10 rounded-lg text-light hover:text-accent hover:border-accent/30 transition-all duration-300"
+                    className="p-2 transition-all duration-300 border rounded-lg bg-background/50 border-accent/10 text-light hover:text-accent hover:border-accent/30"
                     aria-label={social.label}
                   >
                     <IconComponent size={20} />
@@ -68,7 +68,7 @@ export default function Footer() {
                 <a
                   key={index}
                   href={link.href}
-                  className="text-light hover:text-accent transition-colors duration-300 text-sm"
+                  className="text-sm transition-colors duration-300 text-light hover:text-accent"
                 >
                   {link.name}
                 </a>
@@ -81,33 +81,33 @@ export default function Footer() {
             <h4 className="text-lg font-semibold text-accent">Get In Touch</h4>
             <div className="space-y-2 text-sm">
               <p className="text-light">
-                <span className="text-accent font-medium">Email:</span><br />
+                <span className="font-medium text-accent">Email:</span><br />
                 chandradeep.prasad@example.com
               </p>
               <p className="text-light">
-                <span className="text-accent font-medium">Location:</span><br />
+                <span className="font-medium text-accent">Location:</span><br />
                 India
               </p>
               <div className="flex items-center gap-2 mt-4">
-                <div className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                <div className="relative flex w-2 h-2">
+                  <span className="absolute inline-flex w-full h-full bg-green-400 rounded-full opacity-75 animate-ping"></span>
+                  <span className="relative inline-flex w-2 h-2 bg-green-500 rounded-full"></span>
                 </div>
-                <span className="text-green-400 text-xs font-medium">Available for work</span>
+                <span className="text-xs font-medium text-green-400">Available for work</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-accent/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-2 text-light text-sm">
+        <div className="flex flex-col items-center justify-between gap-4 pt-8 mt-8 border-t border-accent/10 md:flex-row">
+          <div className="flex items-center gap-2 text-sm text-light">
             <span>Made with</span>
             <BiHeart className="text-red-400" size={16} />
             <span>by Chandradeep Prasad</span>
           </div>
           
-          <div className="text-light/60 text-sm">
+          <div className="text-sm text-light/60">
             © {new Date().getFullYear()} All rights reserved.
           </div>
         </div>
