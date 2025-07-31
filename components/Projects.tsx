@@ -36,7 +36,7 @@ const projects = [
     description: "If you wanna check what's the day looks like, Either look from window or open this app",
     longDescription: "A very live weather application with scenes to predict exactly what the day looks out , scene for light rain, heavy rain, thunder, sky color, cloud type, wind speed, snowfall, (day, night, evening, morning) and all this decided by a smart scene maker",
     tech: ["React", "JavaScript", "OpenWeatherMap API", "CSS3", "Framer-motion"],
-    image: "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/projects/Weather.png",
     github: "https://github.com/Chandradeep-Pra/weather-app",
     live: "#",
     featured: false
@@ -128,6 +128,7 @@ export default function Projects() {
               <Image
                 src={project.image}
                 alt={project.title}
+                fill
                 className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
