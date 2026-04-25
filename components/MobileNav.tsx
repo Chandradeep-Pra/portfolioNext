@@ -1,47 +1,53 @@
-// components/MobileNav.tsx
 "use client";
 
 import { useState } from "react";
 import Link from "next/link";
 
 const navItems = [
-  { href: "#hero", label: "Home", icon: "🏠" },
-  { href: "#about", label: "About", icon: "👨‍💻" },
-  { href: "#skills", label: "Skills", icon: "⚡" },
-  { href: "#experience", label: "Experience", icon: "💼" },
-  { href: "#projects", label: "Projects", icon: "🧠" },
-  { href: "#contact", label: "Contact", icon: "✉️" },
+  { href: "#about", label: "About" },
+  { href: "#skills", label: "Skills" },
+  { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="sm:hidden fixed bottom-6 bg-transparent right-4 z-50 flex flex-col items-end gap-4">
-      {/* Expanded Menu */}
+    <div className="fixed inset-x-0 top-0 z-50 border-b border-line/80 bg-white/95 backdrop-blur sm:hidden">
+      <div className="flex items-center justify-between px-4 py-4">
+        <Link
+          href="#hero"
+          className="text-sm font-semibold uppercase tracking-[0.2em] text-text"
+        >
+          Chandradeep
+        </Link>
+
+        <button
+          onClick={() => setOpen((current) => !current)}
+          className="rounded-full border border-line px-4 py-2 text-sm font-medium text-text transition-colors hover:border-accent hover:text-accent"
+          aria-expanded={open}
+          aria-label="Toggle navigation"
+        >
+          {open ? "Close" : "Menu"}
+        </button>
+      </div>
+
       {open && (
-        <div className="flex flex-col gap-3 p-3 bg-background border border-accent/20 backdrop-blur-md rounded-3xl shadow-lg animate-slide-up-fade">
+        <div className="border-t border-line bg-white px-4 py-3">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-accent hover:bg-accent/10 transition"
+              className="block border-b border-line/70 py-3 text-sm text-muted transition-colors last:border-b-0 hover:text-accent"
               onClick={() => setOpen(false)}
             >
-              <span className="text-xl">{item.icon}</span>
-              <span>{item.label}</span>
+              {item.label}
             </Link>
           ))}
         </div>
       )}
-
-      {/* Toggle Button */}
-      <button
-        onClick={() => setOpen(!open)}
-        className="w-14 h-14 rounded-full bg-accent text-white text-2xl shadow-lg flex items-center justify-center transition-transform active:scale-95"
-      >
-        {open ? "✖️" : "☰"}
-      </button>
     </div>
   );
 }

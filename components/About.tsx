@@ -1,198 +1,62 @@
 "use client";
 
-//@ts-nocheck
-
-import {
-  SiReact,
-  SiTypescript,
-  SiTailwindcss,
-  SiNextdotjs,
-  SiFirebase,
-  SiFramer,
-  SiWeb3Dotjs,
-  SiGit,
-} from "react-icons/si";
-import { VscCode } from "react-icons/vsc";
 import Timeline from "./Timeline";
 
+const highlights = [
+  "Built enterprise and startup systems across frontend, backend, and automation layers",
+  "Strong with React, Next.js, Node.js, Python, and API-driven architectures",
+  "Experience with workflow systems, async processing, and role-based access control",
+  "400+ DSA problems solved with a practical engineering mindset",
+];
+
 export default function About() {
-  const Icons = {
-    React: SiReact,
-    TypeScript: SiTypescript,
-    TailwindCSS: SiTailwindcss,
-    Nextjs: SiNextdotjs,
-    Firebase: SiFirebase,
-    FramerMotion: SiFramer,
-    Web3: SiWeb3Dotjs,
-    Git: SiGit,
-    vsCode:VscCode,
-  };
-
-  const techIcons = [
-    { name: "React", color: "text-cyan-400" },
-    { name: "TypeScript", color: "text-blue-400" },
-    { name: "TailwindCSS", color: "text-sky-400" },
-    { name: "Nextjs", color: "text-gray-100" },
-    { name: "Firebase", color: "text-yellow-400" },
-    { name: "FramerMotion", color: "text-pink-400" },
-    { name: "Web3", color: "text-purple-400" },
-    { name: "Git", color: "text-orange-400" },
-    { name: "vsCode", color: "text-blue-300" },
-  ];
-  // const bentoItems = [
-  //   {
-  //     title: "React + TypeScript",
-  //     icon: <SiReact className="text-4xl text-cyan-400" />,
-  //     sub: "Reusable components & strong typings",
-  //   },
-  //   {
-  //     title: "Tailwind + Next.js",
-  //     icon: <SiTailwindcss className="text-4xl text-sky-400" />,
-  //     sub: "Fast styling & SSR-ready apps",
-  //   },
-  //   {
-  //     title: "Firebase & Framer Motion",
-  //     icon: <SiFirebase className="text-4xl text-yellow-400" />,
-  //     sub: "Backend as a Service + animation magic",
-  //   },
-  //   {
-  //     title: "Web3 & VSCode",
-  //     icon: <SiWeb3Dotjs className="text-4xl text-indigo-400" />,
-  //     sub: "Blockchain dev + my daily toolset",
-  //   },
-  //   {
-  //     title: "Design + Accessibility",
-  //     icon: <span className="text-4xl">🎨</span>,
-  //     sub: "Pixel precision + inclusive interfaces",
-  //   },
-  //   {
-  //     title: "Always Learning",
-  //     icon: <span className="text-4xl">🧠</span>,
-  //     sub: "Staying curious, building better every day",
-  //   },
-  // ];
-
-  // const timelineItems = [
-  //   {
-  //     year: "2022",
-  //     title: "Graduated B.Tech (CSE)",
-  //     desc: "Completed my engineering from SIEM, MAKAUT University.",
-  //   },
-  //   {
-  //     year: "2022–2024",
-  //     title: "Frontend Engineer – Nissan Digital",
-  //     desc: "Built vendor portals and responsive UI systems using React, Node.js, and Git. Collaborated with QA using Selenium.",
-  //   },
-  //   {
-  //     year: "2024 – Present",
-  //     title: "Founder – Tic Tech Toe",
-  //     desc: "Started freelancing in April 2024. Delivered web solutions, UI/UX upgrades, and built products for clients as a one-man tech team.",
-  //   },
-  //   {
-  //     year: "2025",
-  //     title: "Focused on AI, Web3 & Firebase",
-  //     desc: "Now building AI-enhanced UI systems, experimenting with Web3, and setting up blazing-fast apps using Firebase.",
-  //   },
-  // ];
-
   return (
-    <section
-      id="about"
-      className="relative z-10 px-6 py-24 mx-auto md:px-20 max-w-7xl text-text"
-    >
-      <h2 className="text-3xl sm:text-4xl font-bold text-accent mb-16 text-center drop-shadow-[0_0_4px_var(--color-accent)]">
-        About Me
-      </h2>
-
-      {/* Responsive Grid */}
-      <div className="grid items-start grid-cols-1 gap-16 md:grid-cols-2">
-        {/* Left Column */}
-        <div className="space-y-10">
-          {/* 👨‍💻 Dev Bio */}
-          <div className="space-y-4 text-base leading-relaxed text-light">
-            <p>
-              I’m a frontend developer who’s obsessed with building interfaces
-              that feel smooth, thoughtful, and alive.
+    <section id="about" className="px-6 py-20 md:px-10">
+      <div className="mx-auto max-w-6xl border-b border-line pb-16">
+        <div className="mb-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p className="font-mono text-sm uppercase tracking-[0.25em] text-accent">
+              About
             </p>
-            <p>
-              I started with a B.Tech in CSE, worked at Nissan Digital, then
-              jumped into freelance life as the founder of{" "}
-              <strong className="text-accent">Tic Tech Toe</strong> — delivering
-              fast, purposeful web experiences to clients.
-            </p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-text sm:text-4xl">
+              A full-stack engineer focused on workflow systems and dependable product delivery.
+            </h2>
           </div>
 
-          {/* 🧾 Quick Summary */}
-          <div className="p-4 border bg-background/50 border-accent/10 rounded-2xl backdrop-blur-md">
-            <p className="text-sm text-primary">
-              🔍 Currently exploring: AI-enhanced UIs, Firebase, and product
-              design systems.
+          <div className="space-y-5 text-base leading-8 text-muted">
+            <p>
+              I build systems that combine solid product interfaces with
+              backend workflows, automation pipelines, and API-driven
+              architecture. My work spans enterprise platforms, dashboards,
+              internal tools, and startup products.
             </p>
-            <a className="mt-2 text-sm underline text-primary underline-offset-1 cursor-help" href="https://linkedin.com/in/chandradeepprasad" target="_blank">
-              ⚡ Actively looking for frontend opportunities.
-            </a>
+            <p>
+              After graduating in computer science, I worked at Nissan Digital,
+              built products at Tic Tech Toe, and now contribute to enterprise
+              compliance platforms at NAVEX Global. That path strengthened both
+              my engineering depth and my ability to ship across the stack.
+            </p>
           </div>
-
-          {/* 🕒 Timeline */}
-        <Timeline />
-
         </div>
 
-        {/* Right Column */}
-        <div className="space-y-10">
-          {/* 🧩 Tech Stack Grid */}
-          <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 justify-items-center">
-  {techIcons.map(({ name, color }, i) => {
-    const IconComponent = Icons[name as keyof typeof Icons];
-    return (
-      <div
-        key={i}
-        className="flex flex-col items-center justify-center p-3 transition border shadow-sm group rounded-xl bg-background/60 border-accent/10 hover:scale-105 hover:shadow-accent/20 backdrop-blur-sm"
-      >
-        {IconComponent && <IconComponent className={`text-3xl ${color}`} />}
-        <span className="mt-1 text-xs transition text-light/80 group-hover:text-accent">
-          {name}
-        </span>
-      </div>
-    );
-  })}
-</div>
+        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+          <Timeline />
 
-
-          {/* 🌟 Highlights */}
-<div className="grid grid-cols-1 gap-4 mt-10 sm:grid-cols-2">
-  {[
-    {
-      title: "Built 20+ reusable components",
-      emoji: "🧱",
-    },
-    {
-      title: "Integrated AI into UIs",
-      emoji: "🤖",
-    },
-    {
-      title: "Worked with real clients",
-      emoji: "🌍",
-    },
-    {
-      title: "400+ DSA problems solved",
-      emoji: "🧠",
-    },
-  ].map((item, i) => (
-    <div
-      key={i}
-      className="p-4 rounded-2xl bg-background/50 border border-accent/10 backdrop-blur-sm 
-  transition-all duration-300 ease-in-out
-  hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(127,90,240,0.15)]
-  animate-fade-up delay-[200ms]"
-    >
-      <p className="flex items-center gap-2 text-lg font-semibold text-accent">
-        <span>{item.emoji}</span> {item.title}
-      </p>
-    </div>
-  ))}
-</div>
-
+          <div className="border border-line bg-surface p-6">
+            <p className="font-mono text-xs uppercase tracking-[0.25em] text-muted">
+              Highlights
+            </p>
+            <ul className="mt-5 space-y-4">
+              {highlights.map((item, index) => (
+                <li key={item} className="border-t border-line pt-4 text-sm leading-7 text-muted first:border-t-0 first:pt-0">
+                  <span className="mr-3 text-accent">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>

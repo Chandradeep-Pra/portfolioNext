@@ -1,33 +1,38 @@
-// components/Nav.tsx
 "use client";
 
 import Link from "next/link";
 
 const links = [
-  { href: "#hero", label: "Home", icon: "🏠" },
-  { href: "#about", label: "About", icon: "👨‍💻" },
-  { href: "#skills", label: "Skills", icon: "⚡" },
-  { href: "#experience", label: "Experience", icon: "💼" },
-  { href: "#projects", label: "Projects", icon: "🧠" },
-  { href: "#contact", label: "Contact", icon: "✉️" },
+  { href: "#about", label: "About" },
+  { href: "#skills", label: "Skills" },
+  { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export default function Nav() {
-  
   return (
-    <nav className="fixed z-50 flex-col hidden gap-6 p-4 -translate-y-1/2 border shadow-md -left-4 top-1/2 sm:flex bg-background/20 backdrop-blur-xl rounded-3xl border-accent/20">
-      {links.map((link) => (
+    <nav className="fixed inset-x-0 top-0 z-50 hidden border-b border-line/80 bg-white/95 backdrop-blur sm:block">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
         <Link
-          key={link.href}
-          href={link.href}
-          className="flex flex-col items-center transition-all group text-accent hover:text-white"
+          href="#hero"
+          className="text-sm font-semibold uppercase tracking-[0.2em] text-text"
         >
-          <span className="text-xl">{link.icon}</span>
-          <span className="text-xs font-medium transition-opacity duration-300 opacity-0 group-hover:opacity-100 text-light">
-            {link.label}
-          </span>
+          Chandradeep Prasad
         </Link>
-      ))}
+
+        <div className="flex items-center gap-6">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-sm text-muted transition-colors hover:text-accent"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      </div>
     </nav>
   );
 }
